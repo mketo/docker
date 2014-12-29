@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-MAINTAINER NGINX Mikael Keto
+MAINTAINER Mikael Keto
 
 # add nginx repository and gpg key
 ADD nginx.repo /etc/yum.repos.d/nginx.repo
