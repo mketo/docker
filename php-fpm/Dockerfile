@@ -29,4 +29,5 @@ yum clean all
 
 EXPOSE 9000
 
-CMD ["php-fpm", "-F"]
+ENTRYPOINT ["php-fpm"]
+CMD ["-F"]
