@@ -6,8 +6,8 @@ MAINTAINER NGINX Mikael Keto
 ADD nginx.repo /etc/yum.repos.d/nginx.repo
 ADD RPM-GPG-KEY-nginx /etc/pki/rpm-gpg/RPM-GPG-KEY-nginx
 
-# update system and install nginx
-RUN yum -y update && yum -y install nginx && yum clean all
+# install nginx
+RUN yum -y install nginx && yum clean all
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
