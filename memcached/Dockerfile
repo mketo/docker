@@ -7,4 +7,5 @@ RUN yum -y install memcached && yum clean all
 
 EXPOSE 11211
 
-CMD ["memcached", "-u", "memcached", "-v"]
+ENTRYPOINT ["memcached"]
+CMD ["-u", "memcached", "-v"]
