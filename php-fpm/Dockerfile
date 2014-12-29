@@ -3,7 +3,8 @@ FROM centos:centos7
 MAINTAINER Mikael Keto
 
 # install php and various extensions
-RUN yum -y install php \
+RUN yum -y epel-release && \
+yum -y install php \
 php-fpm \
 php-bcmath \
 php-enchant \
