@@ -24,7 +24,8 @@ php-simplepie \
 php-soap \
 php-xml \
 php-pecl-geoip \
-php-pecl-memcache && \
+php-pecl-memcache \
+ssmtp && \
 yum clean all
 
 EXPOSE 9000
