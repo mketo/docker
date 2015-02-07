@@ -24,6 +24,7 @@ php-soap \
 php-xml \
 php-pecl-geoip \
 php-pecl-memcache \
+ImageMagick \
 ssmtp && \
 yum clean all
 
