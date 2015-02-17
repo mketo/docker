@@ -25,11 +25,12 @@ php-xml \
 php-pecl-geoip \
 php-pecl-memcache \
 bind-utils \
+java \
 git \
 mariadb \
-java \
 ImageMagick \
-ssmtp && \
+ssmtp \
+telnet && \
 yum clean all
 
 CMD ["echo", "Development"]
