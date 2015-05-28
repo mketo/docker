@@ -1,6 +1,6 @@
 # Php
 
-Dockerfile for php, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for php 5.5, pushed to dockers automated build process and public Docker hub registry.
 
 
 ## Base Docker Image

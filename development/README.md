@@ -1,6 +1,6 @@
 # Development
 
-Dockerfile for php and java development tools, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for php 5.5 and java development tools, pushed to dockers automated build process and public Docker hub registry.
 
 
 ## Base Docker Image

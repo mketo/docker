@@ -1,6 +1,6 @@
 # Php-fpm
 
-Dockerfile for php-fpm, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for php-fpm 5.5, pushed to dockers automated build process and public Docker hub registry.
 
 
 ## Base Docker Image
