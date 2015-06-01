@@ -15,6 +15,7 @@ php55w-enchant \
 php55w-gd \
 php55w-intl \
 php55w-mbstring \
+php55w-mcrypt \
 php55w-mysql \
 php55w-opcache \
 php55w-pdo \
