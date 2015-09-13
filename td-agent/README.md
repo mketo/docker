@@ -1,7 +1,7 @@
 # Development
 
-Dockerfile for td-agent and fluent bigquery plugin, pushed to dockers automated build process and public Docker hub registry.
-
+Dockerfile for td-agent, pushed to dockers automated build process and public Docker hub registry.
+Including plugins: fluent-plugin-bigquery, fluent-plugin-google-cloud.
 
 ## Base Docker Image
 
