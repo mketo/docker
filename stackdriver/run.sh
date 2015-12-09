@@ -5,7 +5,9 @@ if [ -z "$api_key" ]; then
 	exit 1
 fi
 
-/opt/stackdriver/stack-config --api-key=$api_key
+/opt/stackdriver/stack-config --api-key=$api_key --no-start
+/etc/init.d/stackdriver-agent start
+/etc/init.d/stackdriver-extractor start
 
 while true; do
 	sleep 60
