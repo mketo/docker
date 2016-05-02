@@ -5,7 +5,9 @@ MAINTAINER Mikael Keto
 # install openssh server
 RUN yum -y install openssh-server && yum clean all
 
+COPY entrypoint.sh /entrypoint.sh
+
 EXPOSE 22
 
-ENTRYPOINT ["/usr/sbin/sshd"]
-CMD ["-D"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/usr/sbin/sshd", "-D"]
