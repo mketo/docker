@@ -35,6 +35,8 @@ if [ -n "$SSH_PATH" ]; then
 		rm -r /etc/ssh
 		ln -s $SSH_PATH /etc/ssh
 	fi
+else
+	/usr/bin/ssh-keygen -A
 fi
 
 exec "$@"
