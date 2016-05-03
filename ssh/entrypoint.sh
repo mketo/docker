@@ -30,7 +30,7 @@ if [ -n "$SSH_PATH" ]; then
 		mkdir -p $SSH_PATH
 		cp -r /etc/ssh $SSH_PATH
 		rm -r /etc/ssh
-		ln -s $SSH_PATH /etc/ssh
+		ln -s $SSH_PATH/ssh /etc/ssh
 		/usr/bin/ssh-keygen -A
 	else
 		rm -r /etc/ssh
