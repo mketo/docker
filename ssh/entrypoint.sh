@@ -9,10 +9,6 @@
 
 mkdir -p /var/run/sshd
 
-if [ -n "$SSH_UMASK" ]; then
-	umask $SSH_UMASK
-fi
-
 useradd_parameters=""
 if [ -n "$SSH_GID" ]; then
 	useradd_parameters="$useradd_parameters -g $SSH_GID"
@@ -24,6 +20,10 @@ fi
 $(useradd $useradd_parameters $SSH_USERNAME)
 echo -e "$SSH_PASSWORD\n$SSH_PASSWORD" | (passwd --stdin $SSH_USERNAME)
 echo Added $SSH_USERNAME with password $SSH_PASSWORD
+
+if [ -n "$SSH_UMASK" ]; then
+	echo "umask $SSH_UMASK" >> /home/$SSH_USERNAME/.bashrc
+fi
 
 if [ -n "$SSH_PATH" ]; then
 	if [ ! -f "$SSH_PATH" ]; then
