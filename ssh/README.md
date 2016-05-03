@@ -14,6 +14,7 @@ Dockerfile for ssh, pushed to dockers automated build process and public Docker 
 	SSH_PASSWORD
 	SSH_PATH
 	SSH_UID
+	SSH_UMASK
 	SSH_USERNAME
 
 ## Usage

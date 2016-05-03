@@ -4,9 +4,14 @@
 : ${SSH_PASSWORD:=$(dd if=/dev/urandom bs=1 count=20 | base64)}
 : ${SSH_PATH:=}
 : ${SSH_UID:=}
+: ${SSH_UMASK:=}
 : ${SSH_USERNAME:=user}
 
 mkdir -p /var/run/sshd
+
+if [ -n "$SSH_UMASK" ]; then
+	umask $SSH_UMASK
+fi
 
 useradd_parameters=""
 if [ -n "$SSH_GID" ]; then

@@ -2,10 +2,12 @@ FROM centos:centos7
 
 MAINTAINER Mikael Keto
 
-# install openssh server
-RUN yum -y install openssh-server && yum clean all
-
 COPY entrypoint.sh /entrypoint.sh
+
+# install openssh server
+RUN yum -y install openssh-server && \
+yum clean all && \
+chmod 755 /entrypoint.sh
 
 EXPOSE 22
 
