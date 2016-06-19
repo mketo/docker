@@ -34,7 +34,8 @@ git \
 mariadb \
 ImageMagick \
 ssmtp \
-telnet && \
+telnet \
+vim && \
 yum clean all
 
 CMD ["echo", "Development"]
