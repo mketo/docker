@@ -8,8 +8,9 @@ ADD webtatic.repo /etc/yum.repos.d/webtatic.repo
 ADD RPM-GPG-KEY-EPEL-7 /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 ADD RPM-GPG-KEY-webtatic-el7 /etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
 
-# install php and various extensions
-RUN yum -y install php55w \
+# install php/node and various extensions
+RUN curl -sL https://rpm.nodesource.com/setup_4.x | bash - && \
+yum -y install php55w \
 php55w-bcmath \
 php55w-enchant \
 php55w-gd \
@@ -24,6 +25,9 @@ php55w-soap \
 php55w-xml \
 php55w-pecl-geoip \
 php55w-pecl-memcache \
+gcc-c++ \
+make \
+nodejs \
 bind-utils \
 java \
 git \
