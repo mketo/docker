@@ -7,6 +7,7 @@
 : ${SSH_UMASK:=}
 : ${SSH_USERNAME:=user}
 
+rm -f /var/run/nologin
 mkdir -p /var/run/sshd
 
 useradd_parameters=""
