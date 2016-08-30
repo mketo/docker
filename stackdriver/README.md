@@ -10,10 +10,10 @@ Dockerfile for stackdriver, pushed to dockers automated build process and public
 
 ## Usage
 
-	docker run -d -e "api_key=[replace with your api key]" keto/stackdriver
+	docker run -d keto/stackdriver
 
 
 Add your own configation file(s):
 
-	docker run -d -e "api_key=[replace with your api key]" -v /home/core/stackdriver/collectd.d:/opt/stackdriver/collectd/etc/collectd.d:ro keto/stackdriver
+	docker run -d -v /home/core/stackdriver/collectd.d:/opt/stackdriver/collectd/etc/collectd.d:ro keto/stackdriver
 
