@@ -1,6 +1,11 @@
 #!/bin/bash
 
-/opt/stackdriver/stack-config --write-gcm --no-start
+if [ -z "$api_key" ]; then
+    echo "Enviroment variable api_key not found!"
+    exit 1
+fi
+
+/opt/stackdriver/stack-config --api-key=$api_key --write-gcm --no-start
 /etc/init.d/stackdriver-agent start
 /etc/init.d/stackdriver-extractor start
 
