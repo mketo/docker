@@ -7,7 +7,6 @@ fi
 
 /opt/stackdriver/stack-config --api-key=$api_key --write-gcm --no-start
 /etc/init.d/stackdriver-agent start
-/etc/init.d/stackdriver-extractor start
 
 while true; do
 	sleep 60
