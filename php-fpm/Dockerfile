@@ -27,7 +27,7 @@ php55w-pecl-geoip \
 php55w-pecl-memcache \
 ImageMagick \
 ssmtp && \
-yum clean all
+yum clean all && rm -rf /var/cache/yum
 
 EXPOSE 9000
 

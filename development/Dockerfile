@@ -36,6 +36,6 @@ ImageMagick \
 ssmtp \
 telnet \
 vim && \
-yum clean all
+yum clean all && rm -rf /var/cache/yum
 
 CMD ["echo", "Development"]

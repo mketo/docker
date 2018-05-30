@@ -8,7 +8,7 @@ ADD RPM-GPG-KEY-EPEL-7 /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
 # install postfix
 RUN yum -y install postfix && \
-yum clean all
+yum clean all && rm -rf /var/cache/yum
 
 EXPOSE 25
 

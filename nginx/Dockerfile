@@ -7,7 +7,7 @@ ADD nginx.repo /etc/yum.repos.d/nginx.repo
 ADD RPM-GPG-KEY-nginx /etc/pki/rpm-gpg/RPM-GPG-KEY-nginx
 
 # install nginx
-RUN yum -y install nginx && yum clean all
+RUN yum -y install nginx && yum clean all && rm -rf /var/cache/yum
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log

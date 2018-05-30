@@ -10,7 +10,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 # install openssh server
 RUN yum -y install openssh-server unison240-text && \
-yum clean all && \
+yum clean all && rm -rf /var/cache/yum && \
 chmod 755 /entrypoint.sh
 
 EXPOSE 22
