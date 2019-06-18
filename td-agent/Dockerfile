@@ -1,6 +1,6 @@
-FROM centos:centos7
+FROM keto/centos
 
-MAINTAINER Mikael Keto
+LABEL maintainer="Mikael Keto"
 
 # add td-agent repository and gpg key
 ADD td-agent.repo /etc/yum.repos.d/td-agent.repo

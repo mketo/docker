@@ -1,6 +1,6 @@
-FROM centos:centos7
+FROM keto/centos
 
-MAINTAINER Mikael Keto
+LABEL maintainer="Mikael Keto"
 
 # add stackdriver repository
 RUN curl -o /etc/yum.repos.d/stackdriver.repo https://repo.stackdriver.com/stackdriver-el7.repo

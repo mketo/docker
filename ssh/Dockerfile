@@ -1,6 +1,6 @@
-FROM centos:centos7
+FROM keto/centos
 
-MAINTAINER Mikael Keto
+LABEL maintainer="Mikael Keto"
 
 # add epel repository and gpg key
 ADD epel.repo /etc/yum.repos.d/epel.repo
@@ -10,8 +10,8 @@ COPY entrypoint.sh /entrypoint.sh
 
 # install openssh server
 RUN yum -y install openssh-server unison240-text && \
-yum clean all && rm -rf /var/cache/yum && \
-chmod 755 /entrypoint.sh
+	yum clean all && rm -rf /var/cache/yum && \
+	chmod 755 /entrypoint.sh
 
 EXPOSE 22
 

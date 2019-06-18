@@ -10,6 +10,4 @@ Dockerfile for php 5.5, nodejs 4.x and java development tools, pushed to dockers
 
 ## Usage
 
-	docker run -d keto/development
-
-
+	docker run -it --rm keto/development

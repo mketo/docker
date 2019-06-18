@@ -1,6 +1,6 @@
-FROM centos:centos7
+FROM keto/centos
 
-MAINTAINER Mikael Keto
+LABEL maintainer="Mikael Keto"
 
 # add mysql repository and gpg key
 ADD mysql.repo /etc/yum.repos.d/mysql.repo
