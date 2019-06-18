@@ -1,11 +1,11 @@
 # Memcached
 
-Dockerfile for memcached, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for memcached.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
@@ -21,4 +21,3 @@ Start memcached with 1024MB memory and 4096 max simultaneous connections:
 Execute like this to view help:
 
 	docker run -it --rm keto/memcached -h
-

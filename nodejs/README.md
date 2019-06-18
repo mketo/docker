@@ -1,11 +1,11 @@
 # Nodejs
 
-Dockerfile for nodejs, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for NodeJS.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
@@ -16,4 +16,3 @@ Dockerfile for nodejs, pushed to dockers automated build process and public Dock
 Execute like this to view help:
 
 	docker run -it --rm keto/nodejs -h
-

@@ -1,11 +1,11 @@
 # Php-fpm
 
-Dockerfile for php-fpm 5.5, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for php-fpm 5.5.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
@@ -16,4 +16,3 @@ Dockerfile for php-fpm 5.5, pushed to dockers automated build process and public
 Override default php-fpm configation file:
 
 	docker run -d -p 9000:9000 -v /home/core/php/php-fpm.conf:/etc/php-fpm.conf:ro keto/php-fpm
-

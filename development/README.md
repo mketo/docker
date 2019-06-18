@@ -1,11 +1,11 @@
 # Development
 
-Dockerfile for php 5.5, nodejs 4.x and java development tools, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for php 5.5, nodejs 4.x and java development tools.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage

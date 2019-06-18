@@ -1,15 +1,13 @@
-# Php
+# PHP
 
-Dockerfile for php 5.5, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for PHP 5.5.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
 
-	docker run -d keto/php 
-
-
+	docker run -d keto/php

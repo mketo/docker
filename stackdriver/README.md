@@ -1,11 +1,11 @@
 # Stackdriver
 
-Dockerfile for stackdriver, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for Stackdriver.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
@@ -16,4 +16,3 @@ Dockerfile for stackdriver, pushed to dockers automated build process and public
 Add your own configation file(s):
 
 	docker run -d -v /home/core/stackdriver/collectd.d:/opt/stackdriver/collectd/etc/collectd.d:ro keto/stackdriver
-

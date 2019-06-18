@@ -5,10 +5,9 @@ Dockerfile for MariaDB, pushed to dockers automated build process and public Doc
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
 
 	docker run -d keto/mariadb
-
