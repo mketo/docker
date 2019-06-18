@@ -1,7 +1,5 @@
 FROM keto/centos
 
-LABEL maintainer="Mikael Keto"
-
 # install memcached
 RUN yum -y install memcached && yum clean all && rm -rf /var/cache/yum
 

@@ -1,7 +1,5 @@
 FROM keto/centos
 
-LABEL maintainer="Mikael Keto"
-
 ADD nginx.repo /etc/yum.repos.d/nginx.repo
 ADD RPM-GPG-KEY-nginx /etc/pki/rpm-gpg/RPM-GPG-KEY-nginx
 

@@ -1,7 +1,5 @@
 FROM keto/centos
 
-LABEL maintainer="Mikael Keto"
-
 # add epel/webtatic repository and gpg key
 ADD epel.repo /etc/yum.repos.d/epel.repo
 ADD webtatic.repo /etc/yum.repos.d/webtatic.repo

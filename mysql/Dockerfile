@@ -1,7 +1,5 @@
 FROM keto/centos
 
-LABEL maintainer="Mikael Keto"
-
 # add mysql repository and gpg key
 ADD mysql.repo /etc/yum.repos.d/mysql.repo
 ADD RPM-GPG-KEY-mysql /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql

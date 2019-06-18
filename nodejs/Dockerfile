@@ -1,7 +1,5 @@
 FROM keto/centos
 
-LABEL maintainer="Mikael Keto"
-
 # install nodejs (https://github.com/nodesource/distributions)
 RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash - && \
 	yum -y install gcc-c++ git make nodejs && \

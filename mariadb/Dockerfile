@@ -1,7 +1,5 @@
 FROM keto/centos
 
-LABEL maintainer="Mikael Keto"
-
 # add mariadb repository
 ADD mariadb.repo /etc/yum.repos.d/mariadb.repo
 
