@@ -1,11 +1,11 @@
 # Nginx
 
-Dockerfile for Nginx, pushed to dockers automated build process and public Docker hub registry.
+Dockerfile for Nginx.
 
 
 ## Base Docker Image
 
-* [centos:centos7](https://registry.hub.docker.com/_/centos/)
+* [keto:centos](https://hub.docker.com/r/keto/centos)
 
 
 ## Usage
@@ -16,4 +16,3 @@ Dockerfile for Nginx, pushed to dockers automated build process and public Docke
 Override default nginx configation file:
 
 	docker run -d -p 80:80 -v /home/core/nginx/nginx.conf:/etc/nginx/nginx.conf:ro keto/nginx
-
