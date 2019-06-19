@@ -1,6 +1,5 @@
 FROM keto/centos:7
 
-# Install dropbox
 ADD https://www.dropbox.com/download?plat=lnx.x86_64 /dropbox.tar.gz
 ADD https://www.dropbox.com/download?dl=packages/dropbox.py /usr/local/bin/dropbox.py
 RUN tar xfz /dropbox.tar.gz -C /opt/ && \

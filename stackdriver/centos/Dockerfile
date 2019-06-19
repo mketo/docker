@@ -1,9 +1,7 @@
 FROM keto/centos:7
 
-# add stackdriver repository
 RUN curl -o /etc/yum.repos.d/stackdriver.repo https://repo.stackdriver.com/stackdriver-el7.repo
 
-# install stackdriver
 RUN yum -y install initscripts stackdriver-agent && yum clean all && rm -rf /var/cache/yum
 
 RUN mkdir -p /var/lock/subsys; exit 0
