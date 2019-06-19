@@ -10,9 +10,9 @@ Dockerfile for NodeJS.
 
 ## Usage
 
-	docker run -d -p 80:80 keto/nodejs
+	docker run -d --entrypoint node -p 80:80 keto/nodejs
 
 
 Execute like this to view help:
 
-	docker run -it --rm keto/nodejs -h
+	docker run --entrypoint node -it --rm keto/nodejs -h
