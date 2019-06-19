@@ -1,9 +1,9 @@
 FROM keto/centos:7
 
-# install memcached
 RUN yum -y install memcached && yum clean all && rm -rf /var/cache/yum
 
-EXPOSE 11211
-
 ENTRYPOINT ["memcached"]
+
+USER memcached
+EXPOSE 11211
 CMD ["-u", "memcached", "-v"]
