@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 # add td-agent repository and gpg key
 ADD td-agent.repo /etc/yum.repos.d/td-agent.repo

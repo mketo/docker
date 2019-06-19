@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 # install memcached
 RUN yum -y install memcached && yum clean all && rm -rf /var/cache/yum

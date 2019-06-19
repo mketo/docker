@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 # add epel/webtatic repository and gpg key
 ADD epel.repo /etc/yum.repos.d/epel.repo

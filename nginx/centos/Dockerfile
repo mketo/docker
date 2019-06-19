@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 ADD nginx.repo /etc/yum.repos.d/nginx.repo
 ADD RPM-GPG-KEY-nginx /etc/pki/rpm-gpg/RPM-GPG-KEY-nginx

@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 # add mysql repository and gpg key
 ADD mysql.repo /etc/yum.repos.d/mysql.repo

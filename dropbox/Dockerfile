@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 # Install dropbox
 ADD https://www.dropbox.com/download?plat=lnx.x86_64 /dropbox.tar.gz

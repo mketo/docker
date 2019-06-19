@@ -1,4 +1,4 @@
-FROM keto/centos
+FROM keto/centos:7
 
 # add mariadb repository
 ADD mariadb.repo /etc/yum.repos.d/mariadb.repo

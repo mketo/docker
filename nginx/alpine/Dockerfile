@@ -1,4 +1,4 @@
-FROM keto/alpine
+FROM keto/alpine:3.9
 
 RUN apk add --no-cache nginx && \
 	ln -sf /dev/stdout /var/log/nginx/access.log && \
