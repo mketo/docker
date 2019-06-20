@@ -3,6 +3,7 @@
 option_base_images=false
 option_image="."
 option_push=false
+primary_distribution="centos"
 verbose="-q"
 
 build() {
@@ -15,14 +16,14 @@ build() {
 	if [ "$1" == "base" ]; then
 		tags=("keto/${parts[1]}:latest" "keto/${parts[1]}:${parts[2]}")
 	else
-		if [ "${parts[2]}" == "centos" ]; then
+		if [ "${parts[2]}" == "$primary_distribution" ]; then
 			tags+=("keto/${parts[1]}:latest")
 		fi
 
 		if [ "${parts[4]}" == "Dockerfile" ]; then
 			tags+=("keto/${parts[1]}:${parts[2]}")
 			tags+=("keto/${parts[1]}:${parts[3]}-${parts[2]}")
-			if [ "${parts[2]}" == "centos" ]; then
+			if [ "${parts[2]}" == "$primary_distribution" ]; then
 				tags+=("keto/${parts[1]}:${parts[3]}")
 			fi
 		elif [ "${parts[3]}" == "Dockerfile" ]; then
@@ -34,13 +35,13 @@ build() {
 		echo -e "Building '${parts[1]}'.."
 		docker build -t $build_tag $verbose $directory
 
-		if [ "$option_push" == "true" ]; then
-			for tag in "${tags[@]}"
-			do
-				docker tag $build_tag $tag
+		for tag in "${tags[@]}"
+		do
+			docker tag $build_tag $tag
+			if [ "$option_push" == "true" ]; then
 				docker push $tag
-			done
-		fi
+			fi
+		done
 		echo -e ""
 	fi
 }
