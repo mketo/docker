@@ -5,7 +5,7 @@ ADD webtatic.repo /etc/yum.repos.d/webtatic.repo
 ADD RPM-GPG-KEY-EPEL-7 /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 ADD RPM-GPG-KEY-webtatic-el7 /etc/pki/rpm-gpg/RPM-GPG-KEY-webtatic-el7
 
-RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash - && \
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash - && \
 	yum -y install php55w \
 	php55w-bcmath \
 	php55w-enchant \
