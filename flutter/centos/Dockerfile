@@ -7,7 +7,7 @@ FROM keto/centos:7
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN yum -y install bind-utils git java-1.8.0-openjdk unzip which xz && \
+RUN yum -y install bind-utils git java-1.8.0-openjdk-devel unzip which xz && \
 	export ANDROID_HOME=/usr/local/android-sdk && \
 	export PATH="$PATH:/usr/local/flutter/bin:/usr/local/android-sdk/cmdline-tools/bin:/usr/local/rvm/bin:/usr/local/rvm/rubies/default/bin" && \
 	gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB && \
