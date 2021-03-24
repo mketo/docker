@@ -2,6 +2,7 @@
 
 export ANDROID_HOME=/usr/local/android-sdk
 export ANDROID_SDK_ROOT=/usr/local/android-sdk
+export JAVA_HOME=$(alternatives --display java | grep current | sed 's/link currently points to //' | sed 's|/bin/java||' | xargs)
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PATH="$PATH:/usr/local/flutter/bin:/usr/local/android-sdk/cmdline-tools/bin:/usr/local/rvm/bin:/usr/local/rvm/rubies/default/bin"
